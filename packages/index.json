@@ -1,0 +1,26 @@
+{
+ "kind": "soc-package-index",
+ "default": "WP12",
+ "packages": [
+  {
+   "code": "WP12",
+   "name": "Pan Borneo Sabah Fasa 1B - WP12 Sarang to Temuno",
+   "file": "WP12.json"
+  },
+  {
+   "code": "WP13",
+   "name": "Pan Borneo Sabah Fasa 1B - WP13 (details to confirm)",
+   "file": "WP13.json"
+  },
+  {
+   "code": "WP14",
+   "name": "Pan Borneo Sabah Fasa 1B - WP14 (details to confirm)",
+   "file": "WP14.json"
+  },
+  {
+   "code": "OTHER",
+   "name": "Other project (blank - fill in your own details)",
+   "file": "OTHER.json"
+  }
+ ]
+}

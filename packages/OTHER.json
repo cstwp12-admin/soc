@@ -1,0 +1,83 @@
+{
+ "kind": "soc-package",
+ "version": 1,
+ "projectCode": "OTHER",
+ "projectTitle": "",
+ "contractNo": "",
+ "client": "",
+ "confirm": "Blank project for any other job. Enter the project code, title, RFI prefix and logos here.",
+ "rfiPrefix": "RFI-",
+ "teams": [
+  "Consultant",
+  "Contractor",
+  "Client"
+ ],
+ "coordSystems": [
+  "GDM2000 / RSO Borneo (BRSO)",
+  "GDM2000 / UTM Zone 50N",
+  "Timbalai 1948 / RSO Borneo",
+  "Local / site grid",
+  "Other (state in notes)"
+ ],
+ "tolSource": "Indicative values only - confirm against approved ITP / Method Statement / JKR Standard Specification for Road Works (JKR/SPJ).",
+ "presets": [
+  {
+   "id": "cl",
+   "name": "Centreline / chainage pegs",
+   "h": 20,
+   "v": 10
+  },
+  {
+   "id": "str",
+   "name": "Structures: piers, abutments, culverts",
+   "h": 15,
+   "v": 10
+  },
+  {
+   "id": "pile",
+   "name": "Piles (bored / driven) - position",
+   "h": 75,
+   "v": 25
+  },
+  {
+   "id": "kerb",
+   "name": "Kerb, drain, pavement edge",
+   "h": 20,
+   "v": 10
+  },
+  {
+   "id": "form",
+   "name": "Earthworks / subgrade formation",
+   "h": 50,
+   "v": 25
+  },
+  {
+   "id": "sub",
+   "name": "Sub-base / road base",
+   "h": 20,
+   "v": 10
+  },
+  {
+   "id": "wc",
+   "name": "Wearing course / binder course",
+   "h": 20,
+   "v": 6
+  },
+  {
+   "id": "bolt",
+   "name": "Bearing / holding-down bolts",
+   "h": 5,
+   "v": 3
+  },
+  {
+   "id": "gen",
+   "name": "General (template default)",
+   "h": 25,
+   "v": 25
+  }
+ ],
+ "structures": [],
+ "logos": {},
+ "teamLogos": {}
+
+}

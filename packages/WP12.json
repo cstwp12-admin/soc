@@ -1,0 +1,414 @@
+{
+ "kind": "soc-package",
+ "version": 1,
+ "projectCode": "WP12",
+ "projectTitle": "PROJEK LEBUHRAYA PAN BORNEO SABAH FASA 1B: MEMBINA JALAN DARI SARANG KE TEMUNO (WP12)",
+ "contractNo": "",
+ "client": "JKR Sabah",
+ "rfiPrefix": "JKR-RFI-WP12-",
+ "teams": [
+  "CST",
+  "WPC",
+  "SOR"
+ ],
+ "coordSystems": [
+  "GDM2000 / RSO Borneo (BRSO)",
+  "GDM2000 / UTM Zone 50N",
+  "Timbalai 1948 / RSO Borneo",
+  "Local / site grid"
+ ],
+ "tolSource": "Indicative values only - confirm against approved ITP / Method Statement / JKR Standard Specification for Road Works (JKR/SPJ).",
+ "presets": [
+  {
+   "id": "cl",
+   "name": "Centreline / chainage pegs",
+   "h": 20,
+   "v": 10
+  },
+  {
+   "id": "str",
+   "name": "Structures: piers, abutments, culverts",
+   "h": 15,
+   "v": 10
+  },
+  {
+   "id": "pile",
+   "name": "Piles (bored / driven) - position",
+   "h": 75,
+   "v": 25
+  },
+  {
+   "id": "kerb",
+   "name": "Kerb, drain, pavement edge",
+   "h": 20,
+   "v": 10
+  },
+  {
+   "id": "form",
+   "name": "Earthworks / subgrade formation",
+   "h": 50,
+   "v": 25
+  },
+  {
+   "id": "sub",
+   "name": "Sub-base / road base",
+   "h": 20,
+   "v": 10
+  },
+  {
+   "id": "wc",
+   "name": "Wearing course / binder course",
+   "h": 20,
+   "v": 6
+  },
+  {
+   "id": "bolt",
+   "name": "Bearing / holding-down bolts",
+   "h": 5,
+   "v": 3
+  },
+  {
+   "id": "gen",
+   "name": "General (template default)",
+   "h": 25,
+   "v": 25
+  }
+ ],
+ "structures": [
+  {
+   "id": "B1",
+   "grp": "Bridge",
+   "name": "B1 Sg. Sarang Bridge",
+   "ch": 62800
+  },
+  {
+   "id": "B2",
+   "grp": "Bridge",
+   "name": "B2 Sg. Dudar Bridge",
+   "ch": 64800
+  },
+  {
+   "id": "B3",
+   "grp": "Bridge",
+   "name": "B3 Sg. Taburan Bridge",
+   "ch": 68800
+  },
+  {
+   "id": "B4",
+   "grp": "Bridge",
+   "name": "B4 Sg. Taringai Bridge",
+   "ch": 77000
+  },
+  {
+   "id": "C1",
+   "grp": "Culvert",
+   "name": "C1 (1.5m dia. pipe)",
+   "ch": 63000
+  },
+  {
+   "id": "C2",
+   "grp": "Culvert",
+   "name": "C2 (1.8m dia. pipe)",
+   "ch": 63275
+  },
+  {
+   "id": "C3",
+   "grp": "Culvert",
+   "name": "C3 (1.5m dia. pipe)",
+   "ch": 63510
+  },
+  {
+   "id": "C4",
+   "grp": "Culvert",
+   "name": "C4 (Box 2.5x2.5)",
+   "ch": 63900
+  },
+  {
+   "id": "C5",
+   "grp": "Culvert",
+   "name": "C5 (1.5m dia. pipe)",
+   "ch": 65100
+  },
+  {
+   "id": "C6",
+   "grp": "Culvert",
+   "name": "C6 (1.8m dia. pipe)",
+   "ch": 65380
+  },
+  {
+   "id": "C7",
+   "grp": "Culvert",
+   "name": "C7 (1.5m dia. pipe)",
+   "ch": 65700
+  },
+  {
+   "id": "C8",
+   "grp": "Culvert",
+   "name": "C8 (Box 2.5x2.5)",
+   "ch": 66300
+  },
+  {
+   "id": "C9",
+   "grp": "Culvert",
+   "name": "C9 (1.5m dia. pipe)",
+   "ch": 66785
+  },
+  {
+   "id": "C10",
+   "grp": "Culvert",
+   "name": "C10 (Box 2.5x2.5)",
+   "ch": 67037
+  },
+  {
+   "id": "C11",
+   "grp": "Culvert",
+   "name": "C11 (Box 3.0x3.0)",
+   "ch": 67295
+  },
+  {
+   "id": "C12",
+   "grp": "Culvert",
+   "name": "C12 (1.5m dia. pipe)",
+   "ch": 69060
+  },
+  {
+   "id": "C13",
+   "grp": "Culvert",
+   "name": "C13 (Box 3.0x3.0)",
+   "ch": 69950
+  },
+  {
+   "id": "C14",
+   "grp": "Culvert",
+   "name": "C14 (1.5m dia. pipe)",
+   "ch": 70105
+  },
+  {
+   "id": "C15",
+   "grp": "Culvert",
+   "name": "C15 (Box 3.0x3.0)",
+   "ch": 70560
+  },
+  {
+   "id": "C16",
+   "grp": "Culvert",
+   "name": "C16 (1.8m dia. pipe)",
+   "ch": 71000
+  },
+  {
+   "id": "C17",
+   "grp": "Culvert",
+   "name": "C17 (1.8m dia. pipe)",
+   "ch": 71400
+  },
+  {
+   "id": "C18",
+   "grp": "Culvert",
+   "name": "C18 (1.8m dia. pipe)",
+   "ch": 71675
+  },
+  {
+   "id": "C19",
+   "grp": "Culvert",
+   "name": "C19 (Box 4.2x4.8)",
+   "ch": 71775
+  },
+  {
+   "id": "C20",
+   "grp": "Culvert",
+   "name": "C20 (Box 2.5x2.5)",
+   "ch": 72585
+  },
+  {
+   "id": "C21",
+   "grp": "Culvert",
+   "name": "C21 (Box 2.5x2.5)",
+   "ch": 72695
+  },
+  {
+   "id": "C22",
+   "grp": "Culvert",
+   "name": "C22 (1.8m dia. pipe)",
+   "ch": 73175
+  },
+  {
+   "id": "C23",
+   "grp": "Culvert",
+   "name": "C23 (Box 2.0x2.0)",
+   "ch": 73430
+  },
+  {
+   "id": "C24",
+   "grp": "Culvert",
+   "name": "C24 (Box 2.0x3.0)",
+   "ch": 73715
+  },
+  {
+   "id": "C25",
+   "grp": "Culvert",
+   "name": "C25 (Box 2.5x3.5)",
+   "ch": 73900
+  },
+  {
+   "id": "C26",
+   "grp": "Culvert",
+   "name": "C26 (1.8m dia. pipe)",
+   "ch": 74260
+  },
+  {
+   "id": "C27",
+   "grp": "Culvert",
+   "name": "C27 (Box 2.0x3.5)",
+   "ch": 74945
+  },
+  {
+   "id": "C28",
+   "grp": "Culvert",
+   "name": "C28 (Box 2.0x3.5)",
+   "ch": 75020
+  },
+  {
+   "id": "C29",
+   "grp": "Culvert",
+   "name": "C29 (1.5m dia. pipe)",
+   "ch": 75490
+  },
+  {
+   "id": "C30",
+   "grp": "Culvert",
+   "name": "C30 (1.8m dia. pipe)",
+   "ch": 75770
+  },
+  {
+   "id": "C31",
+   "grp": "Culvert",
+   "name": "C31 (Box 2.0x3.0)",
+   "ch": 75980
+  },
+  {
+   "id": "C32",
+   "grp": "Culvert",
+   "name": "C32 (1.8m dia. pipe)",
+   "ch": 77370
+  },
+  {
+   "id": "JC1",
+   "grp": "Junction culvert",
+   "name": "JC1 (0.9m dia. pipe)",
+   "ch": 63525,
+   "side": "LHS"
+  },
+  {
+   "id": "JC2",
+   "grp": "Junction culvert",
+   "name": "JC2 (0.9m dia. pipe)",
+   "ch": 63625,
+   "side": "RHS"
+  },
+  {
+   "id": "JC3",
+   "grp": "Junction culvert",
+   "name": "JC3 (1.5m dia. pipe)",
+   "ch": 68370,
+   "side": "LHS"
+  },
+  {
+   "id": "JC4",
+   "grp": "Junction culvert",
+   "name": "JC4 (0.9m dia. pipe)",
+   "ch": 69525,
+   "side": "LHS"
+  },
+  {
+   "id": "JC5",
+   "grp": "Junction culvert",
+   "name": "JC5 (0.9m dia. pipe)",
+   "ch": 71325,
+   "side": "RHS"
+  },
+  {
+   "id": "JC6",
+   "grp": "Junction culvert",
+   "name": "JC6 (1.5m dia. pipe)",
+   "ch": 71430,
+   "side": "LHS"
+  },
+  {
+   "id": "JC7",
+   "grp": "Junction culvert",
+   "name": "JC7 (0.9m dia. pipe)",
+   "ch": 72200,
+   "side": "LHS"
+  },
+  {
+   "id": "JC8",
+   "grp": "Junction culvert",
+   "name": "JC8 (0.9m dia. pipe)",
+   "ch": 74575,
+   "side": "RHS"
+  },
+  {
+   "id": "JC9",
+   "grp": "Junction culvert",
+   "name": "JC9 (0.9m dia. pipe)",
+   "ch": 74850,
+   "side": "LHS"
+  },
+  {
+   "id": "JC10",
+   "grp": "Junction culvert",
+   "name": "JC10 (0.9m dia. pipe)",
+   "ch": 75400,
+   "side": "LHS"
+  },
+  {
+   "id": "JC11",
+   "grp": "Junction culvert",
+   "name": "JC11 (0.9m dia. pipe)",
+   "ch": 75900,
+   "side": "LHS"
+  },
+  {
+   "id": "JC12",
+   "grp": "Junction culvert",
+   "name": "JC12 (0.9m dia. pipe)",
+   "ch": 76450,
+   "side": "LHS"
+  },
+  {
+   "id": "JC13",
+   "grp": "Junction culvert",
+   "name": "JC13 (0.9m dia. pipe)",
+   "ch": 77250,
+   "side": "LHS"
+  },
+  {
+   "id": "RSW1",
+   "grp": "Reinforced soil wall",
+   "name": "RSW Sg. Dudar",
+   "ch": 64779
+  },
+  {
+   "id": "RSW2",
+   "grp": "Reinforced soil wall",
+   "name": "RSW Sg. Taburan (1)",
+   "ch": 68725
+  },
+  {
+   "id": "RSW3",
+   "grp": "Reinforced soil wall",
+   "name": "RSW Sg. Taburan (2)",
+   "ch": 68875
+  }
+ ],
+ "logos": {
+  "L": "logos/jkr-sabah.png",
+  "R": "logos/azam-jaya.png"
+ },
+ "teamLogos": {
+  "CST": {
+   "R": "logos/py-konsep.png"
+  }
+ }
+
+}
