@@ -39,9 +39,6 @@ readme_index:
   enabled: false
 optional_front_matter:
   remove_originals: true
-include:               # GitHub skips files named README and LICENSE unless they are listed here
-  - README.md
-  - LICENSE.md
 
 defaults:
   - scope: { path: "" }
@@ -51,8 +48,6 @@ exclude:
   - tests/
   - tools/
   - samples/
-  - lib/
   - "*.py"
   - "*.xlsx"
   - SAMPLE-RESULTS.md
-  - setup.json

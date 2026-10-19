@@ -1,5 +1,11 @@
 # Change log
 
+## v2.0.0-rc.3 (19 Oct 2026) - publishing fix
+
+- **Fixed:** "could not load lib/jspdf.umd.min.js" on GitHub Pages. The docs-site settings (`_config.yml`) kept the `lib/` folder out of the published site. The libraries are now published.
+- The in-app *User guide* and *What changed* links open the docs pages on the same site (the guide, with the docs theme) instead of the GitHub file view.
+- New publish check (`tests/test_publish.py`): every file the app loads must exist and must not be excluded from the site.
+
 ## v2.0.0-rc.2 (19 Oct 2026) - report screen, board and field polish
 
 - **Generate report screen redesigned:** result summary, *Document* settings, *Header shows* and *Report contents* as switch rows with short descriptions, *More outputs* grid, and **Share PDF / Preview / Save** fixed at the bottom.

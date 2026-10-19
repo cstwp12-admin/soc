@@ -1,7 +1,7 @@
 /* Set-Out Check - core, state, rendering, packages, register, setup, events, boot
    Classic script: shares one global scope with the other files. Load order: app.js, scanner.js, report.js (boot runs on window load). */
 "use strict";
-const APP_VERSION = "2.0.0-rc.2";
+const APP_VERSION = "2.0.0-rc.3";
 const APP_NAME = "Set-Out Check";
 const APP_AUTHOR = "WPN";
 const APP_CREDIT = `${APP_NAME} app developed by ${APP_AUTHOR}`;
@@ -943,8 +943,8 @@ function openPkgEditor() {
   };
   $("#peReset").onclick = async () => { if (!confirmLocalized(`Remove your changes to ${S.pkg} on this device?`)) return; localStorage.removeItem("soc_pkgov_" + S.pkg); localStorage.removeItem(`soc_customStructures_${S.pkg}`); await loadPackage(S.pkg); applyPkgChrome(); renderAllUI(); closeDlg(); toast("Reset"); };
 }
-const DOCS_BASE_URL = "https://github.com/cstwp12-admin/soc/blob/main/";
-function docUrl(file) { return DOCS_BASE_URL + file; }
+/* Docs are built into pages by the Jekyll theme (GUIDE.md -> GUIDE.html) on the same site as the app. */
+function docUrl(file) { return String(file).replace(/\.md$/, ".html"); }
 function openHelp() {
   openDlg("Help", `
     <div class="help-list">
