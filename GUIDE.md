@@ -11,18 +11,25 @@ Developed by WPN.
 ## 1. Open the app and pick the project
 
 1. Open the app link on your phone. On iPhone: **Share → Add to Home Screen**. On Android (Chrome): **⋮ → Add to Home screen / Install app**.
-2. The project code is at the top left, e.g. **WP12 ▾**. Tap it to choose another project (WP13, WP14, Other project). Each project keeps its own check, so switching does not lose your work.
+2. The project code is at the top left, e.g. **OTHER ▾**. Tap it to choose another project. Each project keeps its own check, so switching does not lose your work.
 
 ![App home screen and checking-aid notice, shown with fictional training data](guide/images/01-start.png)
+
+The bar under the title shows the four steps: **Details → Points → Review → Export**. Tap a step to jump to it; each shows its status (e.g. *12 points*, *1 fail / 12*). The big button at the bottom moves you to the next step.
 
 ## 2. Fill in the check details (section 1)
 
 - **Date, team, surveyed by, designation**: your name, team and instrument are remembered for the next check.
 - **RFI no.**: type only the number part, e.g. `SUR-123`. The project's prefix is added in front.
-- **Structure, chainage / location, element**: say what was set out, e.g. *Pier 2 pile cap - pile positions*.
+- **Structure**: choose from the project's category-grouped list or choose **Other / enter a custom structure**. Manage reusable custom structures in **Setup → Project details & logos**; these stay on this device for the selected project and are included when you export its project file.
+- **Chainage** (optional): enter the starting chainage. Tap **+ Chainage to** to add an end value for a range. Type all the chainage digits; the `+` is inserted before the final three digits (e.g. `12345` becomes `12+345`, and `1234567` becomes `1234+567`).
+- **Specific location / offset** appears when you tap **+ Specific location / offset**. Use it instead of or alongside chainage for details such as *RHS*, *bridge pier* or *gridline B/4*.
+- **Element / description**: say what was set out, e.g. *Pier 2 pile cap - pile positions*.
 - **Check type**: *Horizontal (E, N)*, *Level (RL)* or *Horizontal + Level*.
 - **Element type**: picks the tolerance. Horizontal tolerance is radial; level has separate upper (+) and lower (−) limits. Change them to match the approved ITP / Method Statement, and write where the tolerance comes from in **Tolerance source**.
 - **Instrument, control points & checker** (tap to open): instrument model, serial no., calibration date, station, backsight, BM/TBM, and who checked it — name, team and designation. Generated reports show preparer and checker initials only; no signature is required on the generated document.
+
+![Optional chainage-to and location fields, shown after tapping their buttons](guide/images/09-optional-fields.png)
 
 ![Check details with the independent upper and lower level tolerances](guide/images/02-tolerances.png)
 
@@ -36,6 +43,7 @@ Pick whichever is easiest:
 | **📋 Paste** | You copied rows from Excel, a text file or a message. |
 | **📷 Scan photo** | You have a printed schedule, a field book page or an instrument screen. Choose what is in the photo and whether the values are design or measured. |
 | **+ Add point** | Typing by hand. |
+| **PDF schedule** | Use *Import Excel / CSV* and choose a PDF whose table is real text (not a scan): the rows go to the review table. |
 | **⬇ Blank template** | Download the Excel template to fill in on a laptop. |
 
 After an import, paste or scan, a **review table** opens:
@@ -44,6 +52,8 @@ After an import, paste or scan, a **review table** opens:
 - Check the values against the source. Yellow = hard to read; red = not a number. Tap a cell to correct it.
 - Untick rows you don't want.
 - **Add to the check as**: *Replace all points*, *Add as new points*, or *Merge by point name*. Use **Merge** to import the design values first and the measured values later.
+
+**Coordinate order:** instruments differ (E, N or N, E). The review table has a *Coordinate order* selector. If the check already has design values, the app compares the file with them and picks the right order by itself; otherwise check the message under the selector.
 
 **Quick entry:** in a coordinate box you can type only the last digits, e.g. `88.630`. When you leave the box it becomes `739988.630`, taking the leading digits from the design value. Turn this off in **Setup** if you prefer.
 
@@ -71,43 +81,48 @@ Tap **Point tolerance / own remark** on a card to give one point its own toleran
 
 ## 5. Photos and notes (section 4, optional)
 
-Add site photos with captions and any notes, e.g. *prism height 1.500 m*. Photos are resized and stored on this device; tap a thumbnail to preview it. In the Report dialog, choose whether photos and notes appear in the PDF and select **2 photos per page** or **4 photos per page**. The PDF picks the grid that renders each photo largest — two side by side on a landscape page, or stacked when that is better — and sizes every card to hug its own photo and caption, so mixed photo sizes do not waste space.
+Add site photos with captions, and pick the point each one shows and any notes, e.g. *prism height 1.500 m*. Photos are resized and stored on this device; tap a thumbnail to preview it. In the Report dialog, choose whether photos and notes appear in the PDF and select **2 photos per page** or **4 photos per page**. The PDF picks the grid that renders each photo largest — two side by side on a landscape page, or stacked when that is better — and sizes every card to hug its own photo and caption, so mixed photo sizes do not waste space.
 
 ![Optional site photos and notes with fictional attachments](guide/images/05-photos-notes.png)
 
 ## 6. Generate the report
 
-Tap **Generate report**. The app lists anything missing (name, tolerance, incomplete points). Choose a PDF title and which optional sections to include, then:
+**Re-check:** if points fail, tap **Re-check failed points** in section 3. A new revision starts with only those points (design values kept, measured values cleared). In **Generate report** you can type the revision and choose whether the ref. no., date and revision show in the PDF header.
 
-- A user-verification disclaimer is always included in the PDF and cannot be switched off.
-- The prepared/checked details use initials only. No signature is required on a generated document; a physical signature can be added after printing if required.
-- The report header repeats the project/client line, the project-specific line below it, logos and report title on every page.
-- Photo attachments use the selected two- or four-photo grid and the full project/report header repeats on every page.
-- A compact QR at the bottom right of the first PDF page opens the hosted web app. It carries only the app link, not the check data.
-- The sign-off is a simple prepared/checked initials line with a generated-document note; no signature is required.
-- **Export check data**: downloads a JSON file containing check details, point measurements and photos. Send the file to the other user; they can import it through **Setup → Restore backup**. QR codes are not used to transfer check data because larger checks are impractical to scan.
-- **Plan view target plot** can be included or omitted independently from the level chart/statistics.
-- **📤 Share PDF**: send to WhatsApp, email, etc.
-- **👁 Preview PDF**, **⬇ Save PDF**
-- **📊 Save Excel**: the template layout with live formulas, plus a *Details* sheet
-- **🧾 Save CSV**
-- **🖼 Preview WhatsApp board**: review a shareable technical summary image with toggles to show or hide project/location, result/counts, technical summary, points needing attention, point results, instrument/control details and app branding; edit its caption before opening the phone’s share sheet. If image sharing is unavailable, the PNG downloads and the caption can be copied.
-- **💬 Copy WhatsApp text**: a short summary listing any failed points
-- **💬 Send feedback**: opens WhatsApp with a short pre-filled message ready to send. No number is stored in the app — choose the chat yourself in WhatsApp.
+Tap **Generate report**. The Report screen is laid out top to bottom:
 
-![Report title and optional report sections](guide/images/06-report-options.png)
+1. **Result summary:** PASS / FAIL, the counts and the largest radial offset. Below it, either *All details look complete* or a list of things to check first (missing names, tolerance, incomplete points).
+2. **Document:** the report title, the **revision** and the number of **photos per page** (2 or 4).
+3. **Header shows:** switches for the ref. no., date and revision in the PDF header.
+4. **Report contents:** switches for the plan plot, level chart and statistics, instrument and control, site notes, site photos and the prepared / checked initials.
+5. **More outputs:** WhatsApp board, Excel, CSV, copy WhatsApp text, export check data and feedback.
+6. **Share PDF / Preview / Save** stay at the bottom of the screen while you scroll.
 
-![WhatsApp summary-board preview with its editable caption](guide/images/08-whatsapp-board.png)
+![Report screen: result summary, document settings and header switches](guide/images/06-report-options.png)
+
+![Report contents switches and more outputs](guide/images/10-report-outputs.png)
+
+Good to know:
+
+- A user-verification disclaimer is always in the PDF and cannot be switched off.
+- The prepared / checked details use initials only. No signature is required on a generated document.
+- A compact QR code opens the hosted app. It carries only the app link, never the check data.
+- **Export check data** downloads a JSON file with the check details, points and photos. The other user imports it through **Setup → Restore backup**.
+- **Excel** uses the template layout with live formulas plus a *Details* sheet.
+- **WhatsApp board** is a summary image (result, counts, technical summary, points needing attention, point table, instrument and control). Use the switches in its preview to hide parts, edit the caption, then share. If image sharing is unavailable the PNG downloads and the caption can be copied. No point coordinates are included.
+- **Feedback** opens WhatsApp with a short message ready; choose the chat yourself.
+
+![WhatsApp summary board with its editable caption](guide/images/08-whatsapp-board.png)
 
 Choose a color theme and **English** or **Bahasa Malaysia** for the core interface labels and report/share outputs in **Setup**. The checking notice at the top of the page can be dismissed; its full text remains in **Help → About** and in generated reports. When hosted, the app detects its web address for Share and report QR codes; set an **App sharing link** override only if needed. App QR codes share the app link only. To import a check-transfer JSON file, open **Setup → Restore backup** and select the file; the app will ask before replacing that project's current draft.
 
 Every shared or saved report is kept in the **Register** (top right). Open an old check from there to correct it and share it again (same ref. no.).
 
-**↺ New check** clears the points, photos and notes but keeps your team, names, instrument, control and tolerance.
+After you preview, save or share a PDF, use the visible **Start a new check** action in the report dialog to begin the next report. The **Start a new check** button below the form is also available; either clears the points, photos and notes but keeps your team, names, instrument, control and tolerance.
 
 ## 7. Setup
 
-- **AI scan (Gemini)**: paste your own free Gemini API key from [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and tap **Test key**. The key stays on your phone.
+- **AI scan (Gemini)**: the first time you tap **Scan photo** without a key, a short note explains the options and offers **Go to Setup**. Paste your own free Gemini API key from [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and tap **Test key**. The key stays on your phone.
 - **Tolerance presets**: edit, add or reset.
 - **Checking rules**: gross error limit (default 500 mm) and the marginal level (default 80 %).
 - **Project details & logos**: see below.
@@ -120,10 +135,10 @@ When hosted, the app checks for service-worker updates while online and shows an
 
 ![Appearance and sharing-link settings](guide/images/07-appearance.png)
 
-### Setting up a project (WP13, WP14, other jobs)
+### Setting up a project
 
 1. Switch to the project (tap the code at the top left).
-2. **Setup → Project details & logos**, or **WP13 ▾ → Edit project details & logos**.
+2. **Setup → Project details & logos**, or **project code ▾ → Edit project details & logos**.
 3. Enter the project code, title (as it should appear on the report), contract no., RFI prefix and teams.
 4. Upload the logos: left (client), right (default, e.g. the contractor), and a right logo for each team if wanted (e.g. the consultant's logo when the team is CST).
 5. **Save** keeps it on this phone. **Export project file** saves a `.json` file: send it to the app administrator to upload to `packages/`, or share it so others can use **+ Add project from file**.

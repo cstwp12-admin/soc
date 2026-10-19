@@ -1,0 +1,7 @@
+Pt,Easting (m),Northing (m),Remarks
+A1,"612,345.003","654,320.998",ok
+A2,612347.396,654321.005,
+
+A3,654323.400,612345.004,E/N swapped on purpose
+A3,612349.8,n/a,"duplicate name, text value"
+A5,612349.800,654326.200,,extra col

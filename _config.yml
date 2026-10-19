@@ -1,0 +1,58 @@
+# Set-Out Check docs site: the shared "Site Tools" Jekyll theme (in this repository, no gem needed).
+# GitHub Pages builds the .md files (README, GUIDE, CHANGELOG ...) into pages with this theme.
+# index.html (the app) has no front matter, so Jekyll copies it unchanged.
+
+title: Set-Out Check
+tagline: Check set-out points on site and share a clean PDF record
+description: Compare design and measured coordinates on site, get offsets, PASS / FAIL and remarks, and share a PDF record. Developed by WPN.
+developer: WPN
+app_url: ./
+app_icon: icon.svg
+accent: "#D9480F"
+hero_images:
+  - guide/hero_points.png
+  - guide/hero_pdf.png
+nav:
+  - { title: Guide, url: GUIDE.html }
+  - { title: What's new, url: CHANGELOG.html }
+  - { title: Roadmap, url: ROADMAP.html }
+  - { title: About, url: README.html }
+footer_links:
+  - { title: Licence, url: LICENSE.html }
+  - { title: Third-party notices, url: THIRD-PARTY-NOTICES.html }
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    disable: true
+
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
+  - jekyll-default-layout
+relative_links:
+  enabled: true
+readme_index:
+  enabled: false
+optional_front_matter:
+  remove_originals: true
+include:               # GitHub skips files named README and LICENSE unless they are listed here
+  - README.md
+  - LICENSE.md
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }
+
+exclude:
+  - tests/
+  - tools/
+  - samples/
+  - lib/
+  - "*.py"
+  - "*.xlsx"
+  - SAMPLE-RESULTS.md
+  - setup.json

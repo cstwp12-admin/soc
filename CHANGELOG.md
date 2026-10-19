@@ -1,5 +1,81 @@
 # Change log
 
+## v2.0.0-rc.2 (19 Oct 2026) - report screen, board and field polish
+
+- **Generate report screen redesigned:** result summary, *Document* settings, *Header shows* and *Report contents* as switch rows with short descriptions, *More outputs* grid, and **Share PDF / Preview / Save** fixed at the bottom.
+- **WhatsApp board redesigned:** dark header with the ref. no., result panel with big counts, tidy technical summary, point cards, rounded result tags and a cleaner footer.
+- **Optional fields:** *+ Chainage to* and *+ Specific location / offset* are dashed buttons that open their field when tapped.
+- **Portrait PDF:** the ref. no. no longer runs into the date; the header control row sizes each cell to its content.
+- Guide: new screenshots (fictional data), report screen and optional-field sections.
+
+## v2.0.0-rc.1 (19 Oct 2026) - rebuild, step 5: polish and release candidate
+
+- **First-run AI note:** the first time *Scan photo* is used without a Gemini key, a short note explains the AI and offline options and links to Setup.
+- **Accessibility:** automated check (axe-core) reports no violations in the app, dialogs and dark theme; every control has a label, contrast raised, one page heading.
+- **Offline:** the app, libraries and OCR work without signal; the PDF-import library loads on first use.
+- **Performance:** a 500-point check builds its PDF in about 10 s.
+- **Docs:** user guide, roadmap, third-party notices (including pdf.js) and a documentation site theme shared with the other tools.
+- Remaining before 2.0.0: confirm SheetJS and jsQR licence wording (see notices) and field-test on site.
+
+## v2.0.0-beta.6 (19 Oct 2026) - rebuild, step 4: new features
+
+- **Coordinate order (E,N or N,E):** the import review has a *Coordinate order* selector. If the check already has design values, the app compares the file with them (by point name) and reads the columns the right way round by itself, with a message. Without design values, a file with no headings is flagged as *assumed E, N*.
+- **Better column recognition:** *Pile, Stake, Marker, Bolt, Hole, Node, Position* headings are point names; a title line above the headings is no longer glued to every heading; OCR and headerless data tell grid coordinates from levels by size, so an RL column is never read as a coordinate.
+- **PDF schedules:** import a PDF with a text table (not a scan) straight into the review table.
+- **Photos linked to points:** pick the point each photo shows; the PDF prints *Photo 2 - Point P10*.
+- **Re-check failed points:** in *Review*, one tap starts the next revision with only the failed points (design values kept, measured cleared, note added).
+- **Register:** filters by result, team and date range, with counts; revision shown on each entry and in the CSV.
+- **Check before sharing:** if points are incomplete or flagged CHECK, or the tolerance is not set, *Share PDF* and *Save PDF* ask for confirmation first.
+- **Excel:** the *Details* sheet includes the revision.
+
+## v2.0.0-beta.5 (19 Oct 2026) - PDF header: larger project name, document control
+
+- **Project name larger** (up to 11 pt, shrinking only if it would wrap) and centred between the logos.
+- **Document-control row** under the title band: *Ref. no. / Date / Revision*. In *Report*, choose which of the three to show (and type the revision, e.g. 0, A, B). Later pages show them in the compact title band.
+- Portrait reports (horizontal-only and level-only): the plan plot now fits on page 1 when there is room; coordinate columns no longer touch.
+
+## v2.0.0-beta.4 (19 Oct 2026) - PDF header and footer
+
+- **Header redesigned as a table:** logo cells of equal width on both sides, so the project name is centred between them; a smaller navy title band ("SETTING-OUT CHECK RECORD") below. Continuation pages carry a compact title band with the reference and date.
+- **Footer as a table strip:** reference | date | credit and version | page x of y, in one tidy band on every page.
+
+## v2.0.0-beta.3 (19 Oct 2026) - rebuild, step 3: new PDF report
+
+- **PDF redesigned:** a result panel at the top (big PASS / FAIL, counts, max radial, RMS, max dZ), check details as a clean label / value list, a lighter results table (failed rows marked with a red edge and tint, result as a coloured tag, header repeats on every page), a larger plan plot beside the level chart and a statistics list, sign-off boxes for *Prepared by* / *Checked by* with a signature line and the app QR code, and photos as a captioned appendix.
+- Consistent header (accent rule) and footer (reference, date, page x of y, credit) on every page. The checking-aid notice stays on the report, now after the sign-off so the results fit on page 1.
+- Fixed: the level tolerance minus sign printed as a quote mark (`"10 mm`).
+
+## v2.0.0-beta.2 (19 Oct 2026) - rebuild, step 2
+
+- **Step bar:** *Details, Points, Review, Export* under the header, like ClaimPack. Each step shows what is missing or its result (e.g. "Name needed", "12 points", "1 fail / 12") and turns green when complete. Tap a step to jump to it.
+- **Welcome screen** on first use (four steps, *Try with sample data*).
+- Section 3 is now called *Review*; point tools sit in a tidy two-column grid on phones.
+
+## v2.0.0-beta.1 (19 Oct 2026) - rebuild, step 1
+
+- **Code split** into `index.html`, `style.css`, `app.js`, `scanner.js`, `report.js` and `events.js` (was one 227 KB file). No change to how the app works: the sample check gives identical results, PDF and Excel to beta.13.
+- **Shared look** with ClaimPack and Timesheet: Barlow / Barlow Condensed / IBM Plex Mono type, the same colours, numbered section badges, condensed headings and action button. Dark mode follows the phone by default (*Setup -> Color theme* still lets you choose).
+- Added `version.json`, `THIRD-PARTY-NOTICES.md`, `samples/` (fictional test files), `tools/` (sample generator) and `tests/` (regression test).
+
+## v1.3.0-beta.13 (18 Oct 2026)
+
+- The chainage end and specific location/offset fields are now collapsed optional inputs, opened only when needed.
+- Fixed chainage formatting while typing: the cursor is preserved, all digits are retained, and multi-digit chainage values are supported (e.g. `1234567` becomes `1234+567`).
+- Restored the structure selector's category-grouped list. Custom structure names can be added and removed in Project Setup, remain per-project on the device, and are included in exported project files.
+
+## v1.3.0-beta.12 (18 Oct 2026)
+
+- Added a visible “Start a new check” action in the report dialog after PDF preview, save or share, so users can begin the next report without scrolling to the bottom of the form.
+- Structure is now an editable suggestion field. Users can enter any structure and optionally save it to a custom list for the current project on that device.
+- Replaced the combined location field with optional start/end chainages and a separate free-text location/offset field. Numeric chainage entry inserts `+` before the final three digits; chainage and location now flow into reports, register entries and the WhatsApp board.
+
+## v1.3.0-beta.11 (18 Oct 2026)
+
+- Help, About and Setup now open the user guide, change log and licence in GitHub's rendered Markdown view instead of displaying raw Markdown from GitHub Pages.
+- Report references now form a three-letter preparer code from the entered name when enough letters are provided, including single- and two-word names; full names with three or more parts continue to use their first three initials.
+- Enlarged dense horizontal plan plots on a dedicated report page and increased their render resolution for clearer point presentation.
+- Corrected the default app-sharing URL to the published project's GitHub Pages site.
+
 ## v1.3.0-beta.10 (17 Oct 2026)
 
 - Moved the app QR caption below the first-page QR and shifted the WPN app attribution below the footer reference/page-count row to prevent overlap.
@@ -100,7 +176,7 @@
 
 ## v1.1.0 (14 Oct 2026)
 
-- **Projects:** the app is no longer fixed to WP12. Choose WP12, WP13, WP14 or *Other project* from the code at the top left, or open one by link (`?p=WP13`). Each project has its own title, RFI prefix, logos, teams, structures, current check and ref. numbers. Projects are files in `packages/`.
+- **Projects:** the app is no longer fixed to one project. Choose a project from the code at the top left, or open one by link (`?p=CODE`). Each project has its own title, RFI prefix, logos, teams, structures, current check and ref. numbers. Projects are files in `packages/`.
 - **Project details & logos** editor in Setup: edit the project, upload logos (left, right, and per team), save on the phone, and export the project file for GitHub. **+ Add project from file** to use a project file someone shared.
 - **Register:** each entry records its project; the list shows the current project, with *Show all projects* to see everything. Opening an entry from another project switches to that project.
 - **About** screen and developer credit: *Setting-Out Check app developed by WPN* on the About screen, the PDF footer and the Excel *Details* sheet.
@@ -115,4 +191,4 @@
 
 ## v1.0.0
 
-- First version for WP12: horizontal / level checks, tolerance presets, offsets and remarks, Excel / CSV import, paste, photo scan, PDF / Excel / CSV / WhatsApp output, register and backup.
+- First version: horizontal / level checks, tolerance presets, offsets and remarks, Excel / CSV import, paste, photo scan, PDF / Excel / CSV / WhatsApp output, register and backup.
