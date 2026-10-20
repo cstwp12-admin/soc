@@ -1,5 +1,5 @@
 /* Set-Out Check - offline cache. Bump C when files change. */
-const C = "soc-v2.0.0-rc.3";
+const C = "soc-v2.0.0-rc.4";
 const PRE = ["./", "index.html", "style.css", "app.js", "scanner.js", "report.js", "events.js", "manifest.webmanifest", "icon.svg", "icon-192.png", "icon-512.png",
   "lib/jspdf.umd.min.js", "lib/jspdf.plugin.autotable.min.js", "lib/qrcode.min.js", "lib/xlsx.full.min.js",
   "packages/index.json", "packages/WP12.json", "packages/WP13.json", "packages/WP14.json", "packages/OTHER.json",

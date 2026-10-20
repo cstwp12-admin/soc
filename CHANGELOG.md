@@ -1,5 +1,10 @@
 # Change log
 
+## v2.0.0-rc.4 (19 Oct 2026) - fixes
+
+- **Fixed:** toggling a switch in *Report contents* could leave a blank area at the bottom of the Report screen. The hidden checkbox was scrolling the dialog; it now stays inside its row and the dialog can no longer be scrolled sideways by focus.
+- **Added:** an **x** button on *Chainage to* and *Specific location / offset* removes the value and puts the dashed add button back.
+
 ## v2.0.0-rc.3 (19 Oct 2026) - publishing fix
 
 - **Fixed:** "could not load lib/jspdf.umd.min.js" on GitHub Pages. The docs-site settings (`_config.yml`) kept the `lib/` folder out of the published site. The libraries are now published.

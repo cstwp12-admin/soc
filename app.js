@@ -1,7 +1,7 @@
 /* Set-Out Check - core, state, rendering, packages, register, setup, events, boot
    Classic script: shares one global scope with the other files. Load order: app.js, scanner.js, report.js (boot runs on window load). */
 "use strict";
-const APP_VERSION = "2.0.0-rc.3";
+const APP_VERSION = "2.0.0-rc.4";
 const APP_NAME = "Set-Out Check";
 const APP_AUTHOR = "WPN";
 const APP_CREDIT = `${APP_NAME} app developed by ${APP_AUTHOR}`;

@@ -22,6 +22,12 @@ function startNewCheck() {
   S.check = newCheck(S.check); S.check.rfi = ""; saveDraft(); renderAllUI(); closeDlg(); window.scrollTo({ top: 0, behavior: "smooth" });
 }
 $("#secDetails").addEventListener("click", e => {
+  const x = e.target.closest("[data-unreveal]");
+  if (x) {
+    const f = document.getElementById(x.dataset.clear);
+    if (f) { f.value = ""; f.dispatchEvent(new Event("input", { bubbles: true })); }
+    showReveal(x.dataset.unreveal, false); return;
+  }
   const b = e.target.closest("[data-reveal]"); if (!b) return;
   showReveal(b.dataset.reveal, true); const f = document.getElementById(b.dataset.focus); if (f) f.focus();
 });

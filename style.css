@@ -316,3 +316,8 @@ body[data-theme="graphite"] .legal-notice b{color:var(--acc)}
 .rp-bar .btn{justify-content:center;padding:13px 8px;min-height:48px}
 .rp-stats{grid-template-columns:repeat(4,minmax(0,1fr))}.rp-stats span{font-size:10.5px;padding:8px 2px}.rp-stats b{font-size:20px}
 .rp-bar{grid-template-columns:1.5fr 1fr 1fr}.rp-bar .btn{white-space:nowrap}
+.rm{position:absolute;right:0;top:-4px;width:32px;height:32px;border:0;border-radius:50%;background:transparent;color:var(--mut);font:600 22px/1 var(--f-body);cursor:pointer}
+.rm:hover,.rm:focus-visible{background:var(--soft);color:var(--fail,#C92A2A)}
+/* report switches: keep the hidden checkbox inside its row so focusing it never scrolls the dialog */
+.sw{position:relative}.sw input{left:0;top:0}
+dialog{overflow:hidden;overflow:clip}

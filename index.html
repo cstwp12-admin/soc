@@ -48,10 +48,10 @@
         <div class="structure-actions"><button type="button" class="btn sm" id="btnAddStructure">+ Add to this project's list</button><span class="hint" id="structureListHint"></span></div>
       </div>
       <div><label class="f" for="chainageFrom">Chainage (optional)</label><div class="pre"><span>CH</span><input class="i" id="chainageFrom" data-k="chainageFrom" inputmode="numeric" placeholder="12+345" autocomplete="off"></div></div>
-      <div id="chainageToWrap" hidden><label class="f" for="chainageTo">Chainage to</label><div class="pre"><span>CH</span><input class="i" id="chainageTo" data-k="chainageTo" inputmode="numeric" placeholder="12+500" autocomplete="off"></div></div>
+      <div id="chainageToWrap" hidden style="position:relative"><button type="button" class="rm" data-unreveal="chainageToWrap" data-clear="chainageTo" aria-label="Remove chainage to">×</button><label class="f" for="chainageTo">Chainage to</label><div class="pre"><span>CH</span><input class="i" id="chainageTo" data-k="chainageTo" inputmode="numeric" placeholder="12+500" autocomplete="off"></div></div>
       <button type="button" class="reveal" data-reveal="chainageToWrap" data-focus="chainageTo">+ Chainage to</button>
       <span class="hint w2">Type the digits; the + is added for you (12345 becomes 12+345).</span>
-      <div class="w2" id="specificLocationWrap" hidden><label class="f" for="locationIn">Specific location / offset</label><input class="i" id="locationIn" data-k="location" placeholder="e.g. RHS, bridge pier, abutment, gridline B/4"></div>
+      <div class="w2" id="specificLocationWrap" hidden style="position:relative"><button type="button" class="rm" data-unreveal="specificLocationWrap" data-clear="locationIn" aria-label="Remove specific location">×</button><label class="f" for="locationIn">Specific location / offset</label><input class="i" id="locationIn" data-k="location" placeholder="e.g. RHS, bridge pier, abutment, gridline B/4"></div>
       <button type="button" class="reveal w2" data-reveal="specificLocationWrap" data-focus="locationIn">+ Specific location / offset</button>
       <div class="w2"><label class="f">Element / description</label><input class="i" data-k="element" placeholder="e.g. Pier 2 pile cap - pile positions"></div>
     </div>
